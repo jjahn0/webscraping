@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Hot Finds</title>
+  <title>current information</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 
@@ -13,15 +13,15 @@
   <div class="container">
 
     <div class="jumbotron text-center">
-      <h1>Hot Finds On Craigslist</h1>
-      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Find An Awesome Deal!</a></p>
+      <h1>Scraped Mars info</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Find info on Mars!</a></p>
     </div>
 
     <!-- Craigslist Listings -->
-    <div class="row" id="craiglist-listings">
+    <div class="row" id="mars-info">
       <div class="col-md-12">
-        <h4 class="heading">{{listings.price}} {{listings.headline}}</h4>
-        <small>{{listings.hood}}</small>
+        <h4 class="heading">{{info.price}} {{info.headline}}</h4>
+        <small>{{info.hood}}</small>
       </div>
     </div>
 
