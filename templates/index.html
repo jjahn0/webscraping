@@ -14,17 +14,46 @@
 
     <div class="jumbotron text-center">
       <h1>Scraped Mars info</h1>
-      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Find info on Mars!</a></p>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Update info on Mars</a></p>
     </div>
 
     <!-- Craigslist Listings -->
-    <div class="row" id="mars-info">
+    <div class="row" id="mars-news">
       <div class="col-md-12">
-        <h4 class="heading">{{info.price}} {{info.headline}}</h4>
-        <small>{{info.hood}}</small>
+        <h2>Latest News</h2>
+        <h4 class="heading">{{mars.news.headline}} - {{mars.news.date}}</h4>
+        <small>{{mars.news.teaser}}</small>
       </div>
     </div>
 
+    <div class="row" id="mars-image">
+      <div class="col-md-8">
+        <h3>Featured Image</h3>
+        <div>
+          <img src="{{ mars.img_url }}" class="img-responsive">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div style="border: 1px solid black"> 
+          <p><h4>current weather on Mars</h4>
+            {{mars.weather}}
+          </p>
+        </div>
+        <h3>Mars Facts</h3>
+        <table class="table">
+          <th>category</th>
+          <th>fact</th>
+          <tbody>
+            {% for key in mars.facts %}
+            <tr>
+              <td>{{ key }}</td>
+              <td>{{ mars.facts[key] }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
 </body>
 
