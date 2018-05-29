@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>current mars information</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://bootswatch.com/3/cerulean/bootstrap.min.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar-1" aria-exanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+                <a class="navbar-brand" href="/">Scrappy Mars</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        Menu<span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://mars.nasa.gov/news/">Mars News</a></li>
+                        <li><a href="https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars">Mars images</a></li>
+                        <li><a href="https://twitter.com/marswxreport?lang=en">Mars Twitter</a></li>
+                        <li><a href="https://space-facts.com/mars/">Mars Facts</a></li>
+                    </ul>
+                </li>
+                <li><a href="hemisphere.html">hemisphere</a></li>
+            </ul>
+        </div>
+    </div>
+    </nav>
+    <div class="container">
+        <div class="row" style="margin:15px; padding:20px">
+            <a href="{{ mars.img_list[0].href }}" data-toggle="lightbox" data-gallery="gallery" class="col-md-6">
+            <img src="{{ mars.img_list[0].href }}" class="img-responsive rounded thumbnail">
+            </a>
+            <a href="{{ mars.img_list[1].href }}" data-toggle="lightbox" data-gallery="gallery" class="col-md-6">
+            <img src="{{ mars.img_list[1].href }}" class="img-responsive rounded thumbnail">
+            </a>
+        </div>
+        <div class="row">
+            <a href="{{ mars.img_list[2].href }}" data-toggle="lightbox" data-gallery="gallery" class="col-md-6">
+            <img src="{{ mars.img_list[2].href }}" class="img-responsive rounded thumbnail">
+            </a>
+            <a href="{{ mars.img_list[3].href }}" data-toggle="lightbox" data-gallery="gallery" class="col-md-6">
+            <img src="{{ mars.img_list[3].href }}" class="img-responsive rounded thumbnail">
+            </a>
+        </div>
+    </div>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+

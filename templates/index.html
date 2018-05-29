@@ -5,11 +5,41 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>current information</title>
+  <title>current mars information</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://bootswatch.com/3/cerulean/bootstrap.min.css">
 </head>
 
 <body>
+  <nav class="navbar navbar-default">
+      <div class="container-fluid">
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar-1" aria-exanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+                  <a class="navbar-brand" href="/">Scrappy Mars</a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar-1">
+              <ul class="nav navbar-nav navbar-right">
+                  <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                          Menu<span class="caret"></span>
+                      </a>
+                      <ul class="dropdown-menu">
+                          <li><a href="https://mars.nasa.gov/news/">Mars News</a></li>
+                          <li><a href="https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars">Mars images</a></li>
+                          <li><a href="https://twitter.com/marswxreport?lang=en">Mars Twitter</a></li>
+                          <li><a href="https://space-facts.com/mars/">Mars Facts</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="/hemisphere">hemisphere</a></li>
+              </ul>
+          </div>
+      </div>
+  </nav>
   <div class="container">
 
     <div class="jumbotron text-center">
@@ -17,27 +47,22 @@
       <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Update info on Mars</a></p>
     </div>
 
-    <!-- Craigslist Listings -->
-    <div class="row" id="mars-news">
-      <div class="col-md-12">
-        <h2>Latest News</h2>
-        <h4 class="heading">{{mars.news.headline}} - {{mars.news.date}}</h4>
-        <small>{{mars.news.teaser}}</small>
-      </div>
-    </div>
-
-    <div class="row" id="mars-image">
+    <div class="row" id="mars-news-img">
       <div class="col-md-8">
+          <div class="row" style="padding: 20px">
+              <h2>Latest News</h2>
+              <h4 class="heading">{{mars.news.headline}} - {{mars.news.date}}</h4>
+              <small>{{mars.news.teaser}}</small>
+            </div>
         <h3>Featured Image</h3>
         <div>
-          <img src="{{ mars.img_url }}" class="img-responsive">
+          <img src="{{ mars.img_url }}" class="img-responsive" style="padding:15px">
         </div>
       </div>
-      <div class="col-md-4">
-        <div style="border: 1px solid black"> 
-          <p><h4>current weather on Mars</h4>
-            {{mars.weather}}
-          </p>
+      <div class="col-md-4" style="padding: 15px">
+        <div class="span6" style="border: 1px solid silver; padding: 8px"> 
+          <h4>current weather on Mars</h4>
+          <p>{{mars.weather}}</p>
         </div>
         <h3>Mars Facts</h3>
         <table class="table">
@@ -55,6 +80,8 @@
       </div>
     </div>
   </div>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 
 </html>

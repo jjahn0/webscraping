@@ -57,7 +57,7 @@ def scrape_facts():
     categories = list(mars_info[0])
     facts = list(mars_info[1])
     for i in range(len(categories)):
-        categories[i] =categories[i].replace(":","").replace(" ","_")
+        categories[i] =categories[i].replace(":","")
     mars_info_dict = dict(zip(categories,facts))
     return mars_info_dict
 

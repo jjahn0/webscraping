@@ -14,6 +14,11 @@ def index():
     mars = mongo.db.mars.find_one()
     return render_template("index.html", mars=mars)
 
+@app.route("/hemisphere")
+def hemisphere():
+    mars = mongo.db.mars.find_one()
+    return render_template("hemisphere.html", mars=mars)
+
 
 @app.route("/scrape")
 def scraper():
